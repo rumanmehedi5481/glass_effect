@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Effect</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url(./img-2/background.jpg); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      width: 400px;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(3px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      transition: all 0.3s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #ffffff;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+      position: relative;
+    }
+    .input-group i {
+      position: absolute;
+      left: 10px;
+      bottom: 35%;
+    }
+    label {
+      display: block;
+      color: #eee;
+      margin-bottom: 5px;
+    }
+
+    input,
+    input {
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: 100%;
+      height: 50px;
+      outline: none;
+      font-size: 16px;
+      color: #ffffff;
+      padding-left: 35px;
+      padding-right: 10px;
+    }
+
+    input::placeholder {
+      color: #ffffff;
+    }
+
+    button{
+      width: 100%;
+      height: 50px;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: rgba(255, 255, 255, 0.233);
+    }
+
+    .separator {
+  color: yellow;
+  margin: 15px 0;
+}
+
+    .social-login {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .social-login button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-login button:hover {
+      opacity: 0.8;
+    }
+
+    .facebook-button {
+      background-color: rgba(255, 255, 255, 0.233);
+    }
+
+    .google-button {
+      background-color: rgba(255, 255, 255, 0.233);
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Foolish Developer</h2>
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Email Id" />
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password" />
+      <i class="fa-solid fa-lock"></i>
+    </div>
+    <button type="submit">Log In</button>
+    <div class="separator">Or</div>
+    <div class="social-login">
+      <button class="facebook-button">
+        <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
+        Facebook
+      </button>
+      <button class="google-button">
+        <span class="icon"><i class="fa-brands fa-google"></i></span> Google
+      </button>
+    </div>
+  </div>
+  <script
+    src="https://kit.fontawesome.com/839b310fe8.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
